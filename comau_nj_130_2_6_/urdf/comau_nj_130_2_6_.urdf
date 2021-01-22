@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="comau_nj_130_2_6_">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.036185 0.13225 -3.0714E-05"
+        rpy="0 0 0" />
+      <mass
+        value="98.712" />
+      <inertia
+        ixx="3.2685"
+        ixy="-0.0025229"
+        ixz="0.00061533"
+        iyy="6.1022"
+        iyz="-3.6311E-05"
+        izz="4.2691" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="shoulder_span_link">
+    <inertial>
+      <origin
+        xyz="-0.22382 0.33808 0.018249"
+        rpy="0 0 0" />
+      <mass
+        value="79.319" />
+      <inertia
+        ixx="8.6387"
+        ixy="1.9029"
+        ixz="-0.33435"
+        iyy="9.0564"
+        iyz="0.10825"
+        izz="6.5008" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/shoulder_span_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/shoulder_span_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_span_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.331"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulder_span_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="shoulder_lift_link">
+    <inertial>
+      <origin
+        xyz="-0.023928 0.524 -0.1597"
+        rpy="0 0 0" />
+      <mass
+        value="22.854" />
+      <inertia
+        ixx="3.1775"
+        ixy="0.0072"
+        ixz="-0.0069704"
+        iyy="0.34144"
+        iyz="0.051189"
+        izz="3.0696" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/shoulder_lift_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/shoulder_lift_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_lift_joint"
+    type="revolute">
+    <origin
+      xyz="-0.35 0.499 0.1355"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_span_link" />
+    <child
+      link="shoulder_lift_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="elbow_link">
+    <inertial>
+      <origin
+        xyz="0.0082309 0.21402 -0.10188"
+        rpy="0 0 0" />
+      <mass
+        value="28.881" />
+      <inertia
+        ixx="0.86963"
+        ixy="0.084485"
+        ixz="-0.082108"
+        iyy="0.78297"
+        iyz="-0.10415"
+        izz="0.68593" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/elbow_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/elbow_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow_joint"
+    type="revolute">
+    <origin
+      xyz="0 1.16 0"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_lift_link" />
+    <child
+      link="elbow_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="arm_joint_a"
+      multiplier="-1"
+      offset="0" />
+  </joint>
+  <link
+    name="forearm_link">
+    <inertial>
+      <origin
+        xyz="0.0027099 -0.0014244 0.63148"
+        rpy="0 0 0" />
+      <mass
+        value="39.598" />
+      <inertia
+        ixx="3.4042"
+        ixy="0.0059157"
+        ixz="-0.0099423"
+        iyy="3.136"
+        iyz="-0.059333"
+        izz="0.5287" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/forearm_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/forearm_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="forearm_joint"
+    type="revolute">
+    <origin
+      xyz="-0.145 0.25 -0.1355"
+      rpy="-1.5708 0 1.5708" />
+    <parent
+      link="elbow_link" />
+    <child
+      link="forearm_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wirst_link">
+    <inertial>
+      <origin
+        xyz="-0.00025542 0.00031294 -0.050138"
+        rpy="0 0 0" />
+      <mass
+        value="4.012" />
+      <inertia
+        ixx="0.030119"
+        ixy="-1.1225E-05"
+        ixz="-0.00034724"
+        iyy="0.031891"
+        iyz="-0.00033358"
+        izz="0.011464" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/wirst_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/wirst_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wirst_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.96058"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="forearm_link" />
+    <child
+      link="wirst_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="end_effector_link">
+    <inertial>
+      <origin
+        xyz="-0.027348 -0.0016027 -4.9431E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.47986" />
+      <inertia
+        ixx="0.0016185"
+        ixy="4.4067E-06"
+        ixz="5.5239E-10"
+        iyy="0.00089429"
+        iyz="3.6015E-11"
+        izz="0.00083721" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/end_effector_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/end_effector_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="end_effector_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.165"
+      rpy="3.1416 -1.5708 0" />
+    <parent
+      link="wirst_link" />
+    <child
+      link="end_effector_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm_link_a">
+    <inertial>
+      <origin
+        xyz="0.16357 -0.0098618 -0.069464"
+        rpy="0 0 0" />
+      <mass
+        value="4.3288" />
+      <inertia
+        ixx="0.015457"
+        ixy="0.0038178"
+        ixz="0.0005125"
+        iyy="0.065375"
+        iyz="-0.00016591"
+        izz="0.072811" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/arm_link_a.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/arm_link_a.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_joint_a"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.233"
+      rpy="0 0 -0.087266" />
+    <parent
+      link="shoulder_lift_link" />
+    <child
+      link="arm_link_a" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="1.25"
+      upper="-1.07"
+      effort="100"
+      velocity="1.9198622" />
+  </joint>
+  <link
+    name="arm_link_b">
+    <inertial>
+      <origin
+        xyz="0.065147 0.50884 -0.055253"
+        rpy="0 0 0" />
+      <mass
+        value="7.5793" />
+      <inertia
+        ixx="0.66737"
+        ixy="0.017501"
+        ixz="4.6999E-05"
+        iyy="0.018083"
+        iyz="-0.0002257"
+        izz="0.67895" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/arm_link_b.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://comau_nj_130_2_6_/meshes/arm_link_b.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_joint_b"
+    type="revolute">
+    <origin
+      xyz="0.32 0 -0.012"
+      rpy="0 0 0.087266" />
+    <parent
+      link="arm_link_a" />
+    <child
+      link="arm_link_b" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="arm_joint_a"
+      multiplier="-1"
+      offset="0" />
+  </joint>
+</robot>
